@@ -1,0 +1,27 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>icons/battery-charging-svgrepo-com (1) — копия.png</file>
+    <file>icons/battery-charging-svgrepo-com (2).png</file>
+    <file>icons/battery-charging-svgrepo-com (3).png</file>
+    <file>icons/battery-charging-svgrepo-com.png</file>
+    <file>icons/charging-station-14-svgrepo-com (1).png</file>
+    <file>icons/charging-station-14-svgrepo-com.png</file>
+    <file>icons/electric-charging-station-electric-energy-renewable-energy-svgrepo-com (1).png</file>
+    <file>icons/electric-charging-station-electric-energy-renewable-energy-svgrepo-com (2).png</file>
+    <file>icons/electric-charging-station-electric-energy-renewable-energy-svgrepo-com.png</file>
+    <file>icons/car-lights-light-svgrepo-on-com.png</file>
+    <file>icons/car-lights-light-svgrepo-com.png</file>
+    <file>icons/washer_6457226.png</file>
+    <file>icons/air-pump-pump-svgrepo-com (1).png</file>
+    <file>icons/air-pump-pump-svgrepo-com.png</file>
+    <file>icons/battery-svgrepo-com (1).png</file>
+    <file>icons/battery-svgrepo-com.png</file>
+    <file>icons/car-lights-car-svgrepo-com (1).png</file>
+    <file>icons/car-lights-car-svgrepo-com.png</file>
+    <file>icons/car-lights-light-svgrepo-com.png</file>
+    <file>icons/car-lights-light-svgrepo-on-com.png</file>
+    <file>icons/fog-light-fog-svgrepo-com (1).png</file>
+    <file>icons/fog-light-fog-svgrepo-com.png</file>
+    <file>icons/washer_6457226.png</file>
+  </qresource>
+</RCC>

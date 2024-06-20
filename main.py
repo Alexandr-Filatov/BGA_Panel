@@ -12,12 +12,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         super(MainWindow, self).__init__(*args, **kwargs)
         self.setupUi(self)
 
-        self.pushButton.clicked.connect(self.icon_change)
-        self.pushButton_2.clicked.connect(self.icon3_change)
-        self.pushButton_3.clicked.connect(self.icon5_change)
-        self.pushButton_4.clicked.connect(self.icon12_change)
-        self.pushButton_5.clicked.connect(self.icon10_change)
-        self.pushButton_6.clicked.connect(self.icon11_change)
+        self.lowBeamsBtn.clicked.connect(self.lowBeamIconChange)
+        self.highBeamsBtn.clicked.connect(self.highBeamIconChange)
+        self.fogLigghtsBtn.clicked.connect(self.fogLightIconChange)
+        self.battery12Btn.clicked.connect(self.battery12IconChange)
+        self.wheelPumpBtn.clicked.connect(self.wheelsPumpIconChange)
+        self.chargePowerBatBtn.clicked.connect(self.chargePowerBatIconChange)
+        self.powerBatStateBtn.clicked.connect(self.powerBatStateIconChange)
 
 
 
@@ -28,9 +29,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def progress(self):
         #global counter
         value = self.speedSlider.value()
+        angle = self.speedSlider.value()
 
+        self.angleValue(angle)
         self.speedValue(value)
         self.speed.setText(str(round(self.speedSlider.value() * 0.4)))
+        self.speed_2.setText(str(round(angle/3)))
 
         #if counter > 100:
         #    self.timer.stop()
@@ -38,23 +42,26 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         #counter += 1
 
 
-    def icon_change(self):
-        self.label.setPixmap(QtGui.QPixmap("icons/car-lights-light-svgrepo-on-com.png"))
+    def lowBeamIconChange(self):
+        self.lowBeams.setPixmap(QtGui.QPixmap("icons/low_beam_on.png"))
 
-    def icon3_change(self):
-        self.label_3.setPixmap(QtGui.QPixmap("icons/car-lights-car-svgrepo-com (1).png"))
+    def highBeamIconChange(self):
+        self.highBeams.setPixmap(QtGui.QPixmap("icons/high_beam_on.png"))
 
-    def icon5_change(self):
-        self.label_5.setPixmap(QtGui.QPixmap("icons/fog-light-fog-svgrepo-com (1).png"))
+    def fogLightIconChange(self):
+        self.fogLights.setPixmap(QtGui.QPixmap("icons/fog_light_on.png"))
 
-    def icon10_change(self):
-        self.label_10.setPixmap(QtGui.QPixmap("icons/air-pump-pump-svgrepo-com (1).png"))
+    def battery12IconChange(self):
+        self.battery12.setPixmap(QtGui.QPixmap("icons/battery_12V_state_discharge.png"))
 
-    def icon11_change(self):
-        self.label_11.setPixmap(QtGui.QPixmap("icons/electric-charging-station-electric-energy-renewable-energy-svgrepo-com (2).png"))
+    def wheelsPumpIconChange(self):
+        self.wheelsPump.setPixmap(QtGui.QPixmap("icons/wheels_pump_on.png"))
 
-    def icon12_change(self):
-        self.label_12.setPixmap(QtGui.QPixmap("icons/battery-svgrepo-com (1).png"))
+    def chargePowerBatIconChange(self):
+        self.chargePowerBat.setPixmap(QtGui.QPixmap("icons/charge_power_bat_on.png"))
+
+    def powerBatStateIconChange(self):
+        self.powerBatState.setPixmap(QtGui.QPixmap("icons/power_bat_state_20_percent.png"))
 
 
     def speedValue(self, value):
@@ -76,6 +83,21 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         newStyleSheet = styleSheet.replace("{STOP_1}", stop_1).replace("{STOP_2}", stop_2).replace("{COLOR_RED}", color_red).replace("{COLOR_GREEN}", color_green)
 
         self.circularSpeedProgress.setStyleSheet(newStyleSheet)
+
+    def angleValue(self, angle):
+        styleSheetAngle = """ 
+        QWidget{
+            background-color: rgb(0, 0, 0);
+            background-color: qconicalgradient(cx:0.5, cy:0.5, angle:{ANGLE}, stop:0.499 rgba(132, 132, 132, 255), stop:0.5 rgba(52, 26, 0, 255));
+            border-radius: 115px;
+        }
+        """
+
+        angleValue = str(angle/3)
+        newAngleStyleSheet = styleSheetAngle.replace("{ANGLE}", angleValue)
+
+        self.widget_9.setStyleSheet(newAngleStyleSheet)
+
 
 app = QtWidgets.QApplication(sys.argv)
 

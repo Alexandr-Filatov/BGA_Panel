@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="icon">
+    <file>icons/f2g19u-960.png</file>
+    <file>icons/kisspng-car-motor-vehicle-speedometers-5af6cea7719354.3091737515261241994652.jpg</file>
     <file>icons/air-pump-pump-svgrepo-com (1).png</file>
     <file>icons/air-pump-pump-svgrepo-com.png</file>
     <file>icons/battery-charging-svgrepo-com (1) — копия.png</file>
@@ -22,5 +24,8 @@
     <file>icons/fog-light-fog-svgrepo-com (1).png</file>
     <file>icons/fog-light-fog-svgrepo-com.png</file>
     <file>icons/washer_6457226.png</file>
+  </qresource>
+  <qresource prefix="font">
+    <file>fonts/Marske.ttf</file>
   </qresource>
 </RCC>

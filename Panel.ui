@@ -111,7 +111,7 @@ border-radius: 160px;</string>
        <rect>
         <x>40</x>
         <y>40</y>
-        <width>181</width>
+        <width>171</width>
         <height>181</height>
        </rect>
       </property>
@@ -121,8 +121,18 @@ border-radius: 160px;</string>
        </property>
        <item>
         <widget class="QLabel" name="speed">
+         <property name="font">
+          <font>
+           <family>BankGothic Lt BT</family>
+           <pointsize>48</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
          <property name="styleSheet">
-          <string notr="true">font: 75 50pt &quot;Agency FB&quot;;
+          <string notr="true">
+font: 48pt &quot;BankGothic Lt BT&quot;;
 color: rgb(255, 255, 255);
 background-color: rgba(0, 0, 0, 255);</string>
          </property>
@@ -137,7 +147,8 @@ background-color: rgba(0, 0, 0, 255);</string>
        <item>
         <widget class="QLabel" name="kmH">
          <property name="styleSheet">
-          <string notr="true">font: 75 18pt &quot;Agency FB&quot;;
+          <string notr="true">
+font: 20pt &quot;BankGothic Lt BT&quot;;
 color: rgb(255, 255, 255);
 background-color: rgba(0, 0, 0, 255);
 </string>
@@ -164,7 +175,7 @@ background-color: rgba(0, 0, 0, 255);
      <rect>
       <x>120</x>
       <y>600</y>
-      <width>695</width>
+      <width>795</width>
       <height>72</height>
      </rect>
     </property>
@@ -705,14 +716,15 @@ border-radius: 115px;
      <widget class="QLabel" name="speed_2">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>80</x>
         <y>140</y>
-        <width>31</width>
+        <width>71</width>
         <height>45</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 75 30pt &quot;Agency FB&quot;;
+       <string notr="true">
+font: 30pt &quot;BankGothic Lt BT&quot;;
 color: rgb(255, 255, 255);
 background-color: rgba(0, 0, 0, 0);</string>
       </property>
@@ -733,7 +745,8 @@ background-color: rgba(0, 0, 0, 0);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 75 16pt &quot;Agency FB&quot;;
+       <string notr="true">
+font: 12pt &quot;BankGothic Lt BT&quot;;
 color: rgb(255, 255, 255);
 background-color: rgba(0, 0, 0, 0);
 </string>
@@ -770,14 +783,14 @@ border-radius: 120px;</string>
      <x>0</x>
      <y>0</y>
      <width>1006</width>
-     <height>26</height>
+     <height>30</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="rsc_rc.qrc"/>
+  <include location="rsc.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -1,27 +1,19 @@
 <RCC>
   <qresource prefix="icon">
-    <file>icons/battery-charging-svgrepo-com (1) — копия.png</file>
-    <file>icons/battery-charging-svgrepo-com (2).png</file>
-    <file>icons/battery-charging-svgrepo-com (3).png</file>
-    <file>icons/battery-charging-svgrepo-com.png</file>
-    <file>icons/charging-station-14-svgrepo-com (1).png</file>
-    <file>icons/charging-station-14-svgrepo-com.png</file>
-    <file>icons/electric-charging-station-electric-energy-renewable-energy-svgrepo-com (1).png</file>
-    <file>icons/electric-charging-station-electric-energy-renewable-energy-svgrepo-com (2).png</file>
-    <file>icons/electric-charging-station-electric-energy-renewable-energy-svgrepo-com.png</file>
-    <file>icons/car-lights-light-svgrepo-on-com.png</file>
-    <file>icons/car-lights-light-svgrepo-com.png</file>
-    <file>icons/washer_6457226.png</file>
-    <file>icons/air-pump-pump-svgrepo-com (1).png</file>
-    <file>icons/air-pump-pump-svgrepo-com.png</file>
-    <file>icons/battery-svgrepo-com (1).png</file>
-    <file>icons/battery-svgrepo-com.png</file>
-    <file>icons/car-lights-car-svgrepo-com (1).png</file>
-    <file>icons/car-lights-car-svgrepo-com.png</file>
-    <file>icons/car-lights-light-svgrepo-com.png</file>
-    <file>icons/car-lights-light-svgrepo-on-com.png</file>
-    <file>icons/fog-light-fog-svgrepo-com (1).png</file>
-    <file>icons/fog-light-fog-svgrepo-com.png</file>
-    <file>icons/washer_6457226.png</file>
+    <file>icons/battery_12V_state_discharge.png</file>
+    <file>icons/battery_12V_state_OK.png</file>
+    <file>icons/charge_power_bat_off.png</file>
+    <file>icons/charge_power_bat_on.png</file>
+    <file>icons/fog_ligfht_off.png</file>
+    <file>icons/fog_light_on.png</file>
+    <file>icons/high_beam_off.png</file>
+    <file>icons/high_beam_on.png</file>
+    <file>icons/low_beam_off.png</file>
+    <file>icons/low_beam_on.png</file>
+    <file>icons/power_bat_state_20_percent.png</file>
+    <file>icons/power_bat_state_40_percent.png</file>
+    <file>icons/power_bat_state_80_percent.png</file>
+    <file>icons/wheel_pump_off.png</file>
+    <file>icons/wheels_pump_on.png</file>
   </qresource>
 </RCC>

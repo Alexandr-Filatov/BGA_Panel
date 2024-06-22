@@ -56,21 +56,30 @@ class Ui_MainWindow(object):
         self.container.setFrameShadow(QtWidgets.QFrame.Raised)
         self.container.setObjectName("container")
         self.layoutWidget = QtWidgets.QWidget(self.container)
-        self.layoutWidget.setGeometry(QtCore.QRect(40, 40, 181, 181))
+        self.layoutWidget.setGeometry(QtCore.QRect(40, 40, 171, 181))
         self.layoutWidget.setObjectName("layoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.speed = QtWidgets.QLabel(self.layoutWidget)
-        self.speed.setStyleSheet("font: 75 50pt \"Agency FB\";\n"
+        font = QtGui.QFont()
+        font.setFamily("BankGothic Lt BT")
+        font.setPointSize(48)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.speed.setFont(font)
+        self.speed.setStyleSheet("\n"
+"font: 48pt \"BankGothic Lt BT\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgba(0, 0, 0, 255);")
         self.speed.setAlignment(QtCore.Qt.AlignCenter)
         self.speed.setObjectName("speed")
         self.verticalLayout.addWidget(self.speed)
         self.kmH = QtWidgets.QLabel(self.layoutWidget)
-        self.kmH.setStyleSheet("font: 75 18pt \"Agency FB\";\n"
+        self.kmH.setStyleSheet("\n"
+"font: 20pt \"BankGothic Lt BT\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgba(0, 0, 0, 255);\n"
 "")
@@ -83,7 +92,7 @@ class Ui_MainWindow(object):
         self.circularSpeedProgress.raise_()
         self.container.raise_()
         self.layoutWidget1 = QtWidgets.QWidget(self.centralwidget)
-        self.layoutWidget1.setGeometry(QtCore.QRect(120, 600, 695, 72))
+        self.layoutWidget1.setGeometry(QtCore.QRect(120, 600, 795, 72))
         self.layoutWidget1.setObjectName("layoutWidget1")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.layoutWidget1)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -311,15 +320,17 @@ class Ui_MainWindow(object):
 "}")
         self.widget_9.setObjectName("widget_9")
         self.speed_2 = QtWidgets.QLabel(self.widget_9)
-        self.speed_2.setGeometry(QtCore.QRect(100, 140, 31, 45))
-        self.speed_2.setStyleSheet("font: 75 30pt \"Agency FB\";\n"
+        self.speed_2.setGeometry(QtCore.QRect(80, 140, 71, 45))
+        self.speed_2.setStyleSheet("\n"
+"font: 30pt \"BankGothic Lt BT\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgba(0, 0, 0, 0);")
         self.speed_2.setAlignment(QtCore.Qt.AlignCenter)
         self.speed_2.setObjectName("speed_2")
         self.kmH_2 = QtWidgets.QLabel(self.widget_9)
         self.kmH_2.setGeometry(QtCore.QRect(71, 192, 86, 26))
-        self.kmH_2.setStyleSheet("font: 75 16pt \"Agency FB\";\n"
+        self.kmH_2.setStyleSheet("\n"
+"font: 12pt \"BankGothic Lt BT\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgba(0, 0, 0, 0);\n"
 "")
@@ -334,7 +345,7 @@ class Ui_MainWindow(object):
         self.widget_9.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1006, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1006, 30))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -358,4 +369,4 @@ class Ui_MainWindow(object):
         self.powerBatStateBtn.setText(_translate("MainWindow", "Батарея"))
         self.speed_2.setText(_translate("MainWindow", "0"))
         self.kmH_2.setText(_translate("MainWindow", "градусов"))
-#import rsc_rc_rc
+import rsc_rc

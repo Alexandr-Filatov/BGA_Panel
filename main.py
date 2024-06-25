@@ -36,6 +36,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.speedSlider.valueChanged.connect(self.progress3)
 
 
+
+
     def progress1(self):
         # worker = Worker()
         # self.threadpool.start(worker)
@@ -62,12 +64,14 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def iconTangRotate(self, angle):
         angle = self.speedSlider.value()
         pixmap = QtGui.QPixmap("icons/BGA_Side.png")
+        pixmap = pixmap.scaled(127, 92)
         transform = QtGui.QTransform().rotate(360 - int(angle / 3))
         pixmap = pixmap.transformed(transform, QtCore.Qt.SmoothTransformation)
         self.label.setPixmap(pixmap)
     def iconRollRotate(self, angle):
         angle = self.speedSlider.value()
         pixmap2 = QtGui.QPixmap("icons/BGA_front.png")
+        #pixmap2 = pixmap2.scaled(92, 92)
         transform = QtGui.QTransform().rotate(int(angle / 3))
         pixmap2 = pixmap2.transformed(transform, QtCore.Qt.SmoothTransformation)
         self.label_2.setPixmap(pixmap2)

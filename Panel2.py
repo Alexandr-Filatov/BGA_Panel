@@ -70,13 +70,13 @@ class Ui_MainWindow(object):
 "}")
         self.rollAnimation.setObjectName("rollAnimation")
         self.label_2 = QtWidgets.QLabel(self.rollAnimation)
-        self.label_2.setGeometry(QtCore.QRect(50, 50, 130, 130))
+        self.label_2.setGeometry(QtCore.QRect(59, 39, 141, 141))
         self.label_2.setStyleSheet("background-color: rgba(0, 0, 0, 0);\n"
 "border-radius: 20px;\n"
 "padding: 8px;")
         self.label_2.setText("")
         self.label_2.setPixmap(QtGui.QPixmap("icons/BGA_front.png"))
-        self.label_2.setScaledContents(True)
+        self.label_2.setScaledContents(False)
         self.label_2.setObjectName("label_2")
         self.speed_3 = QtWidgets.QLabel(self.rollAnimation)
         self.speed_3.setGeometry(QtCore.QRect(75, 180, 80, 50))
@@ -310,13 +310,15 @@ class Ui_MainWindow(object):
         self.speed_2.setAlignment(QtCore.Qt.AlignCenter)
         self.speed_2.setObjectName("speed_2")
         self.label = QtWidgets.QLabel(self.tangAnimation)
-        self.label.setGeometry(QtCore.QRect(25, 50, 180, 130))
+        self.label.setGeometry(QtCore.QRect(25, 29, 180, 151))
         self.label.setStyleSheet("background-color: rgba(0, 0, 0, 0);\n"
 "border-radius: 20px;\n"
 "padding: 8px;")
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap("icons/BGA_Side.png"))
-        self.label.setScaledContents(True)
+        self.label.setScaledContents(False)
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setWordWrap(False)
         self.label.setObjectName("label")
         self.tangCanvas = QtWidgets.QWidget(self.tangBase)
         self.tangCanvas.setGeometry(QtCore.QRect(5, 5, 240, 240))

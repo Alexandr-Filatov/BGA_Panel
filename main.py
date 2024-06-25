@@ -1,7 +1,7 @@
 import sys
 from PyQt5 import QtWidgets, QtGui, QtCore,  uic
 
-from Panel import Ui_MainWindow
+from Panel2 import Ui_MainWindow
 import rsc_rc
 
 counter = 0

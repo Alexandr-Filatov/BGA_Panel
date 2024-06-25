@@ -25,10 +25,10 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;
    <widget class="QFrame" name="circularSpeedBase">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>120</y>
-      <width>320</width>
-      <height>320</height>
+      <x>300</x>
+      <y>150</y>
+      <width>400</width>
+      <height>400</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -46,8 +46,8 @@ border-radius: 160px;</string>
       <rect>
        <x>5</x>
        <y>5</y>
-       <width>310</width>
-       <height>310</height>
+       <width>390</width>
+       <height>390</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -68,8 +68,8 @@ border-radius: 160px;</string>
       <rect>
        <x>5</x>
        <y>5</y>
-       <width>310</width>
-       <height>310</height>
+       <width>390</width>
+       <height>390</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -90,8 +90,8 @@ border-radius: 160px;</string>
       <rect>
        <x>30</x>
        <y>30</y>
-       <width>260</width>
-       <height>260</height>
+       <width>340</width>
+       <height>340</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -111,8 +111,8 @@ border-radius: 160px;</string>
        <rect>
         <x>40</x>
         <y>40</y>
-        <width>171</width>
-        <height>181</height>
+        <width>261</width>
+        <height>261</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -134,7 +134,8 @@ border-radius: 160px;</string>
           <string notr="true">
 font: 48pt &quot;BankGothic Lt BT&quot;;
 color: rgb(255, 255, 255);
-background-color: rgba(0, 0, 0, 255);</string>
+background-color: rgba(0, 0, 0, 255);
+</string>
          </property>
          <property name="text">
           <string>0</string>
@@ -173,13 +174,20 @@ background-color: rgba(0, 0, 0, 255);
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>13</x>
       <y>600</y>
-      <width>795</width>
+      <width>971</width>
       <height>72</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QSlider" name="speedSlider">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QPushButton" name="lowBeamsBtn">
        <property name="text">
@@ -234,24 +242,11 @@ background-color: rgba(0, 0, 0, 255);
      </item>
     </layout>
    </widget>
-   <widget class="QSlider" name="speedSlider">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>510</y>
-      <width>22</width>
-      <height>160</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>80</y>
+      <x>300</x>
+      <y>70</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -315,7 +310,7 @@ padding:5px;</string>
    <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
      <rect>
-      <x>450</x>
+      <x>465</x>
       <y>30</y>
       <width>70</width>
       <height>70</height>
@@ -377,8 +372,8 @@ padding: 5px;</string>
    <widget class="QWidget" name="widget_3" native="true">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>80</y>
+      <x>630</x>
+      <y>70</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -439,8 +434,8 @@ padding: 5px;</string>
    <widget class="QWidget" name="widget_4" native="true">
     <property name="geometry">
      <rect>
-      <x>730</x>
-      <y>450</y>
+      <x>880</x>
+      <y>480</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -501,8 +496,8 @@ padding: 8px;</string>
    <widget class="QWidget" name="widget_5" native="true">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>500</y>
+      <x>140</x>
+      <y>450</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -563,8 +558,8 @@ padding: 8px;</string>
    <widget class="QWidget" name="widget_6" native="true">
     <property name="geometry">
      <rect>
-      <x>730</x>
-      <y>190</y>
+      <x>880</x>
+      <y>300</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -625,8 +620,8 @@ padding: 8px;</string>
    <widget class="QWidget" name="widget_7" native="true">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>320</y>
+      <x>880</x>
+      <y>390</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -684,7 +679,7 @@ padding: 8px;</string>
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="widget_8" native="true">
+   <widget class="QWidget" name="tangBase" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -697,7 +692,7 @@ padding: 8px;</string>
      <string notr="true">border-radius: 125px;
 background-color: rgb(255, 255, 255);</string>
     </property>
-    <widget class="QWidget" name="widget_9" native="true">
+    <widget class="QWidget" name="tangAnimation" native="true">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -708,8 +703,7 @@ background-color: rgb(255, 255, 255);</string>
      </property>
      <property name="styleSheet">
       <string notr="true">QWidget{
-background-color: rgb(0, 0, 0);
-background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0.499 rgba(132, 132, 132, 255), stop:0.5 rgba(52, 26, 0, 255));
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0.499 rgba(227, 227, 227, 255), stop:0.5 rgba(0, 0, 0, 255));
 border-radius: 115px;
 }</string>
      </property>
@@ -759,7 +753,7 @@ background-color: rgba(0, 0, 0, 0);
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="widget_10" native="true">
+    <widget class="QWidget" name="tangCanvas" native="true">
      <property name="geometry">
       <rect>
        <x>5</x>
@@ -773,9 +767,111 @@ background-color: rgba(0, 0, 0, 0);
 border-radius: 120px;</string>
      </property>
     </widget>
-    <zorder>widget_10</zorder>
-    <zorder>widget_9</zorder>
+    <zorder>tangCanvas</zorder>
+    <zorder>tangAnimation</zorder>
    </widget>
+   <widget class="QWidget" name="rollBase" native="true">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>0</y>
+      <width>250</width>
+      <height>250</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 125px;
+background-color: rgb(255, 255, 255);</string>
+    </property>
+    <widget class="QWidget" name="rollAnimation" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>230</width>
+       <height>230</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget{
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0.499 rgba(227, 227, 227, 255), stop:0.5 rgba(0, 0, 0, 255));
+border-radius: 115px;
+}</string>
+     </property>
+     <widget class="QLabel" name="speed_3">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>140</y>
+        <width>91</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+font: 30pt &quot;BankGothic Lt BT&quot;;
+color: rgb(255, 255, 255);
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="kmH_3">
+      <property name="geometry">
+       <rect>
+        <x>71</x>
+        <y>192</y>
+        <width>86</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+font: 12pt &quot;BankGothic Lt BT&quot;;
+color: rgb(255, 255, 255);
+background-color: rgba(0, 0, 0, 0);
+</string>
+      </property>
+      <property name="text">
+       <string>градусов</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="rollCanvas" native="true">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>5</y>
+       <width>240</width>
+       <height>240</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
+border-radius: 120px;</string>
+     </property>
+    </widget>
+    <zorder>rollCanvas</zorder>
+    <zorder>rollAnimation</zorder>
+   </widget>
+   <zorder>rollBase</zorder>
+   <zorder>circularSpeedBase</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>widget</zorder>
+   <zorder>widget_2</zorder>
+   <zorder>widget_3</zorder>
+   <zorder>widget_4</zorder>
+   <zorder>widget_5</zorder>
+   <zorder>widget_6</zorder>
+   <zorder>widget_7</zorder>
+   <zorder>tangBase</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -786,6 +882,18 @@ border-radius: 120px;</string>
      <height>30</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuDiagnostic">
+    <property name="title">
+     <string>Diagnostic</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuDiagnostic"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

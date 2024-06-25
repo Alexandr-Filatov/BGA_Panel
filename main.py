@@ -31,10 +31,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         value = self.speedSlider.value()
         angle = self.speedSlider.value()
 
-        self.angleValue(angle)
+        self.angleTangValue(angle)
+        self.angleRollValue(angle)
         self.speedValue(value)
         self.speed.setText(str(round(self.speedSlider.value() * 0.4)))
-        self.speed_2.setText(str(round(angle/3)))
+        self.speed_2.setText(str(round(angle / 3)))
+        self.speed_3.setText(str(round(angle / 3)))
 
         #if counter > 100:
         #    self.timer.stop()
@@ -84,11 +86,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.circularSpeedProgress.setStyleSheet(newStyleSheet)
 
-    def angleValue(self, angle):
-        styleSheetAngle = """ 
+    def angleTangValue(self, angle):
+        styleSheetAngle = """
         QWidget{
-            background-color: rgb(0, 0, 0);
-            background-color: qconicalgradient(cx:0.5, cy:0.5, angle:{ANGLE}, stop:0.499 rgba(132, 132, 132, 255), stop:0.5 rgba(52, 26, 0, 255));
+            background-color: qconicalgradient(cx:0.5, cy:0.5, angle:{ANGLE}, stop:0.499 rgba(227, 227, 227, 255), stop:0.5 rgba(0, 0, 0, 255));
             border-radius: 115px;
         }
         """
@@ -96,7 +97,20 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         angleValue = str(angle/3)
         newAngleStyleSheet = styleSheetAngle.replace("{ANGLE}", angleValue)
 
-        self.widget_9.setStyleSheet(newAngleStyleSheet)
+        self.tangAnimation.setStyleSheet(newAngleStyleSheet)
+
+    def angleRollValue(self, angle):
+        styleSheetAngle = """
+        QWidget{
+            background-color: qconicalgradient(cx:0.5, cy:0.5, angle:{ANGLE}, stop:0.499 rgba(227, 227, 227, 255), stop:0.5 rgba(0, 0, 0, 255));
+            border-radius: 115px;
+        }
+        """
+
+        angleValue = str(360 -(angle/3))
+        newAngleStyleSheet = styleSheetAngle.replace("{ANGLE}", angleValue)
+
+        self.rollAnimation.setStyleSheet(newAngleStyleSheet)
 
 
 app = QtWidgets.QApplication(sys.argv)

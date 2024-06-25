@@ -22,14 +22,14 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.circularSpeedBase = QtWidgets.QFrame(self.centralwidget)
-        self.circularSpeedBase.setGeometry(QtCore.QRect(320, 120, 320, 320))
+        self.circularSpeedBase.setGeometry(QtCore.QRect(300, 150, 400, 400))
         self.circularSpeedBase.setStyleSheet("background-color: rgba(255, 255, 255, 255);\n"
 "border-radius: 160px;")
         self.circularSpeedBase.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.circularSpeedBase.setFrameShadow(QtWidgets.QFrame.Raised)
         self.circularSpeedBase.setObjectName("circularSpeedBase")
         self.circularSpeedProgress = QtWidgets.QFrame(self.circularSpeedBase)
-        self.circularSpeedProgress.setGeometry(QtCore.QRect(5, 5, 310, 310))
+        self.circularSpeedProgress.setGeometry(QtCore.QRect(5, 5, 390, 390))
         self.circularSpeedProgress.setStyleSheet("QFrame{\n"
 "    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:270, stop:0 rgba(170, 0, 0, 0), stop:0.00632911 rgba(0, 255, 0, 0), stop:0.998734 rgba(60, 255, 0, 255));\n"
 "    border-radius:155px;\n"
@@ -38,7 +38,7 @@ class Ui_MainWindow(object):
         self.circularSpeedProgress.setFrameShadow(QtWidgets.QFrame.Raised)
         self.circularSpeedProgress.setObjectName("circularSpeedProgress")
         self.circularBg = QtWidgets.QFrame(self.circularSpeedBase)
-        self.circularBg.setGeometry(QtCore.QRect(5, 5, 310, 310))
+        self.circularBg.setGeometry(QtCore.QRect(5, 5, 390, 390))
         self.circularBg.setStyleSheet("QFrame{\n"
 "    background-color: rgba(0, 0, 0, 255);\n"
 "    border-radius:155px;\n"
@@ -47,7 +47,7 @@ class Ui_MainWindow(object):
         self.circularBg.setFrameShadow(QtWidgets.QFrame.Raised)
         self.circularBg.setObjectName("circularBg")
         self.container = QtWidgets.QFrame(self.circularSpeedBase)
-        self.container.setGeometry(QtCore.QRect(30, 30, 260, 260))
+        self.container.setGeometry(QtCore.QRect(30, 30, 340, 340))
         self.container.setStyleSheet("QFrame{\n"
 "    border-radius: 130px;\n"
 "    background-color: rgb(0, 0, 0);\n"
@@ -56,7 +56,7 @@ class Ui_MainWindow(object):
         self.container.setFrameShadow(QtWidgets.QFrame.Raised)
         self.container.setObjectName("container")
         self.layoutWidget = QtWidgets.QWidget(self.container)
-        self.layoutWidget.setGeometry(QtCore.QRect(40, 40, 171, 181))
+        self.layoutWidget.setGeometry(QtCore.QRect(40, 40, 261, 261))
         self.layoutWidget.setObjectName("layoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -73,7 +73,8 @@ class Ui_MainWindow(object):
         self.speed.setStyleSheet("\n"
 "font: 48pt \"BankGothic Lt BT\";\n"
 "color: rgb(255, 255, 255);\n"
-"background-color: rgba(0, 0, 0, 255);")
+"background-color: rgba(0, 0, 0, 255);\n"
+"")
         self.speed.setAlignment(QtCore.Qt.AlignCenter)
         self.speed.setObjectName("speed")
         self.verticalLayout.addWidget(self.speed)
@@ -92,11 +93,15 @@ class Ui_MainWindow(object):
         self.circularSpeedProgress.raise_()
         self.container.raise_()
         self.layoutWidget1 = QtWidgets.QWidget(self.centralwidget)
-        self.layoutWidget1.setGeometry(QtCore.QRect(120, 600, 795, 72))
+        self.layoutWidget1.setGeometry(QtCore.QRect(13, 600, 971, 72))
         self.layoutWidget1.setObjectName("layoutWidget1")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.layoutWidget1)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setObjectName("horizontalLayout")
+        self.speedSlider = QtWidgets.QSlider(self.layoutWidget1)
+        self.speedSlider.setOrientation(QtCore.Qt.Vertical)
+        self.speedSlider.setObjectName("speedSlider")
+        self.horizontalLayout.addWidget(self.speedSlider)
         self.lowBeamsBtn = QtWidgets.QPushButton(self.layoutWidget1)
         self.lowBeamsBtn.setObjectName("lowBeamsBtn")
         self.horizontalLayout.addWidget(self.lowBeamsBtn)
@@ -119,12 +124,8 @@ class Ui_MainWindow(object):
         self.powerBatStateBtn.setEnabled(True)
         self.powerBatStateBtn.setObjectName("powerBatStateBtn")
         self.horizontalLayout.addWidget(self.powerBatStateBtn)
-        self.speedSlider = QtWidgets.QSlider(self.centralwidget)
-        self.speedSlider.setGeometry(QtCore.QRect(60, 510, 22, 160))
-        self.speedSlider.setOrientation(QtCore.Qt.Vertical)
-        self.speedSlider.setObjectName("speedSlider")
         self.widget = QtWidgets.QWidget(self.centralwidget)
-        self.widget.setGeometry(QtCore.QRect(280, 80, 70, 70))
+        self.widget.setGeometry(QtCore.QRect(300, 70, 70, 70))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -151,7 +152,7 @@ class Ui_MainWindow(object):
         self.lowBeams.setAlignment(QtCore.Qt.AlignCenter)
         self.lowBeams.setObjectName("lowBeams")
         self.widget_2 = QtWidgets.QWidget(self.centralwidget)
-        self.widget_2.setGeometry(QtCore.QRect(450, 30, 70, 70))
+        self.widget_2.setGeometry(QtCore.QRect(465, 30, 70, 70))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -177,7 +178,7 @@ class Ui_MainWindow(object):
         self.highBeams.setScaledContents(True)
         self.highBeams.setObjectName("highBeams")
         self.widget_3 = QtWidgets.QWidget(self.centralwidget)
-        self.widget_3.setGeometry(QtCore.QRect(610, 80, 70, 70))
+        self.widget_3.setGeometry(QtCore.QRect(630, 70, 70, 70))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -203,7 +204,7 @@ class Ui_MainWindow(object):
         self.fogLights.setScaledContents(True)
         self.fogLights.setObjectName("fogLights")
         self.widget_4 = QtWidgets.QWidget(self.centralwidget)
-        self.widget_4.setGeometry(QtCore.QRect(730, 450, 70, 70))
+        self.widget_4.setGeometry(QtCore.QRect(880, 480, 70, 70))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -229,7 +230,7 @@ class Ui_MainWindow(object):
         self.battery12.setScaledContents(True)
         self.battery12.setObjectName("battery12")
         self.widget_5 = QtWidgets.QWidget(self.centralwidget)
-        self.widget_5.setGeometry(QtCore.QRect(450, 500, 70, 70))
+        self.widget_5.setGeometry(QtCore.QRect(140, 450, 70, 70))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -255,7 +256,7 @@ class Ui_MainWindow(object):
         self.wheelsPump.setScaledContents(True)
         self.wheelsPump.setObjectName("wheelsPump")
         self.widget_6 = QtWidgets.QWidget(self.centralwidget)
-        self.widget_6.setGeometry(QtCore.QRect(730, 190, 70, 70))
+        self.widget_6.setGeometry(QtCore.QRect(880, 300, 70, 70))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -281,7 +282,7 @@ class Ui_MainWindow(object):
         self.chargePowerBat.setScaledContents(True)
         self.chargePowerBat.setObjectName("chargePowerBat")
         self.widget_7 = QtWidgets.QWidget(self.centralwidget)
-        self.widget_7.setGeometry(QtCore.QRect(760, 320, 70, 70))
+        self.widget_7.setGeometry(QtCore.QRect(880, 390, 70, 70))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -306,20 +307,19 @@ class Ui_MainWindow(object):
         self.powerBatState.setPixmap(QtGui.QPixmap("icons/power_bat_state_80_percent.png"))
         self.powerBatState.setScaledContents(True)
         self.powerBatState.setObjectName("powerBatState")
-        self.widget_8 = QtWidgets.QWidget(self.centralwidget)
-        self.widget_8.setGeometry(QtCore.QRect(0, 0, 250, 250))
-        self.widget_8.setStyleSheet("border-radius: 125px;\n"
+        self.tangBase = QtWidgets.QWidget(self.centralwidget)
+        self.tangBase.setGeometry(QtCore.QRect(0, 0, 250, 250))
+        self.tangBase.setStyleSheet("border-radius: 125px;\n"
 "background-color: rgb(255, 255, 255);")
-        self.widget_8.setObjectName("widget_8")
-        self.widget_9 = QtWidgets.QWidget(self.widget_8)
-        self.widget_9.setGeometry(QtCore.QRect(10, 10, 230, 230))
-        self.widget_9.setStyleSheet("QWidget{\n"
-"background-color: rgb(0, 0, 0);\n"
-"background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0.499 rgba(132, 132, 132, 255), stop:0.5 rgba(52, 26, 0, 255));\n"
+        self.tangBase.setObjectName("tangBase")
+        self.tangAnimation = QtWidgets.QWidget(self.tangBase)
+        self.tangAnimation.setGeometry(QtCore.QRect(10, 10, 230, 230))
+        self.tangAnimation.setStyleSheet("QWidget{\n"
+"background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0.499 rgba(227, 227, 227, 255), stop:0.5 rgba(0, 0, 0, 255));\n"
 "border-radius: 115px;\n"
 "}")
-        self.widget_9.setObjectName("widget_9")
-        self.speed_2 = QtWidgets.QLabel(self.widget_9)
+        self.tangAnimation.setObjectName("tangAnimation")
+        self.speed_2 = QtWidgets.QLabel(self.tangAnimation)
         self.speed_2.setGeometry(QtCore.QRect(80, 140, 71, 45))
         self.speed_2.setStyleSheet("\n"
 "font: 30pt \"BankGothic Lt BT\";\n"
@@ -327,7 +327,7 @@ class Ui_MainWindow(object):
 "background-color: rgba(0, 0, 0, 0);")
         self.speed_2.setAlignment(QtCore.Qt.AlignCenter)
         self.speed_2.setObjectName("speed_2")
-        self.kmH_2 = QtWidgets.QLabel(self.widget_9)
+        self.kmH_2 = QtWidgets.QLabel(self.tangAnimation)
         self.kmH_2.setGeometry(QtCore.QRect(71, 192, 86, 26))
         self.kmH_2.setStyleSheet("\n"
 "font: 12pt \"BankGothic Lt BT\";\n"
@@ -336,21 +336,74 @@ class Ui_MainWindow(object):
 "")
         self.kmH_2.setAlignment(QtCore.Qt.AlignCenter)
         self.kmH_2.setObjectName("kmH_2")
-        self.widget_10 = QtWidgets.QWidget(self.widget_8)
-        self.widget_10.setGeometry(QtCore.QRect(5, 5, 240, 240))
-        self.widget_10.setStyleSheet("background-color: rgb(0, 0, 0);\n"
+        self.tangCanvas = QtWidgets.QWidget(self.tangBase)
+        self.tangCanvas.setGeometry(QtCore.QRect(5, 5, 240, 240))
+        self.tangCanvas.setStyleSheet("background-color: rgb(0, 0, 0);\n"
 "border-radius: 120px;")
-        self.widget_10.setObjectName("widget_10")
-        self.widget_10.raise_()
-        self.widget_9.raise_()
+        self.tangCanvas.setObjectName("tangCanvas")
+        self.tangCanvas.raise_()
+        self.tangAnimation.raise_()
+        self.rollBase = QtWidgets.QWidget(self.centralwidget)
+        self.rollBase.setGeometry(QtCore.QRect(750, 0, 250, 250))
+        self.rollBase.setStyleSheet("border-radius: 125px;\n"
+"background-color: rgb(255, 255, 255);")
+        self.rollBase.setObjectName("rollBase")
+        self.rollAnimation = QtWidgets.QWidget(self.rollBase)
+        self.rollAnimation.setGeometry(QtCore.QRect(10, 10, 230, 230))
+        self.rollAnimation.setStyleSheet("QWidget{\n"
+"background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0.499 rgba(227, 227, 227, 255), stop:0.5 rgba(0, 0, 0, 255));\n"
+"border-radius: 115px;\n"
+"}")
+        self.rollAnimation.setObjectName("rollAnimation")
+        self.speed_3 = QtWidgets.QLabel(self.rollAnimation)
+        self.speed_3.setGeometry(QtCore.QRect(70, 140, 91, 45))
+        self.speed_3.setStyleSheet("\n"
+"font: 30pt \"BankGothic Lt BT\";\n"
+"color: rgb(255, 255, 255);\n"
+"background-color: rgba(0, 0, 0, 0);")
+        self.speed_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.speed_3.setObjectName("speed_3")
+        self.kmH_3 = QtWidgets.QLabel(self.rollAnimation)
+        self.kmH_3.setGeometry(QtCore.QRect(71, 192, 86, 26))
+        self.kmH_3.setStyleSheet("\n"
+"font: 12pt \"BankGothic Lt BT\";\n"
+"color: rgb(255, 255, 255);\n"
+"background-color: rgba(0, 0, 0, 0);\n"
+"")
+        self.kmH_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.kmH_3.setObjectName("kmH_3")
+        self.rollCanvas = QtWidgets.QWidget(self.rollBase)
+        self.rollCanvas.setGeometry(QtCore.QRect(5, 5, 240, 240))
+        self.rollCanvas.setStyleSheet("background-color: rgb(0, 0, 0);\n"
+"border-radius: 120px;")
+        self.rollCanvas.setObjectName("rollCanvas")
+        self.rollCanvas.raise_()
+        self.rollAnimation.raise_()
+        self.rollBase.raise_()
+        self.circularSpeedBase.raise_()
+        self.layoutWidget.raise_()
+        self.widget.raise_()
+        self.widget_2.raise_()
+        self.widget_3.raise_()
+        self.widget_4.raise_()
+        self.widget_5.raise_()
+        self.widget_6.raise_()
+        self.widget_7.raise_()
+        self.tangBase.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1006, 30))
         self.menubar.setObjectName("menubar")
+        self.menuFile = QtWidgets.QMenu(self.menubar)
+        self.menuFile.setObjectName("menuFile")
+        self.menuDiagnostic = QtWidgets.QMenu(self.menubar)
+        self.menuDiagnostic.setObjectName("menuDiagnostic")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuDiagnostic.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -369,4 +422,8 @@ class Ui_MainWindow(object):
         self.powerBatStateBtn.setText(_translate("MainWindow", "Батарея"))
         self.speed_2.setText(_translate("MainWindow", "0"))
         self.kmH_2.setText(_translate("MainWindow", "градусов"))
+        self.speed_3.setText(_translate("MainWindow", "0"))
+        self.kmH_3.setText(_translate("MainWindow", "градусов"))
+        self.menuFile.setTitle(_translate("MainWindow", "File"))
+        self.menuDiagnostic.setTitle(_translate("MainWindow", "Diagnostic"))
 import rsc_rc

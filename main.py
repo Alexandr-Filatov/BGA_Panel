@@ -1,16 +1,27 @@
 import sys
 from PyQt5 import QtWidgets, QtGui, QtCore,  uic
-
+from PyQt5.QtCore import *
+import math
 from Panel2 import Ui_MainWindow
-import rsc_rc
 
-counter = 0
+# class Worker(QRunnable):
+#
+#     def __init__(self, *args, **kwargs):
+#         super(Worker, self).__init__()
+#         self.args = args
+#         self.kwargs = kwargs
+#         self.signals = MainWindow()
+#     @pyqtSlot()
+#     def run(self):
+#         pass
+
+
+
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
-
-
     def __init__(self, *args, obj=None, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
         self.setupUi(self)
+        #self.threadpool = QThreadPool()
 
         self.lowBeamsBtn.clicked.connect(self.lowBeamIconChange)
         self.highBeamsBtn.clicked.connect(self.highBeamIconChange)
@@ -20,28 +31,47 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.chargePowerBatBtn.clicked.connect(self.chargePowerBatIconChange)
         self.powerBatStateBtn.clicked.connect(self.powerBatStateIconChange)
 
+        self.speedSlider.valueChanged.connect(self.progress1)
+        self.speedSlider.valueChanged.connect(self.progress2)
+        self.speedSlider.valueChanged.connect(self.progress3)
 
 
-        self.timer = QtCore.QTimer()
-        self.timer.timeout.connect(self.progress)
-        self.timer.start(10)
-
-    def progress(self):
-        #global counter
+    def progress1(self):
+        # worker = Worker()
+        # self.threadpool.start(worker)
         value = self.speedSlider.value()
         angle = self.speedSlider.value()
-
-        self.angleTangValue(angle)
-        self.angleRollValue(angle)
         self.speedValue(value)
         self.speed.setText(str(round(self.speedSlider.value() * 0.4)))
         self.speed_2.setText(str(round(angle / 3)))
         self.speed_3.setText(str(round(angle / 3)))
 
-        #if counter > 100:
-        #    self.timer.stop()
+    def progress2(self):
+        angle = self.speedSlider.value()
+        self.angleTangValue(angle)
+        self.angleRollValue(angle)
 
-        #counter += 1
+    def progress3(self):
+        # worker = Worker()
+        # self.threadpool.start(worker)
+        angle = self.speedSlider.value()
+        self.iconRollRotate(angle)
+        self.iconTangRotate(angle)
+
+
+    def iconTangRotate(self, angle):
+        angle = self.speedSlider.value()
+        pixmap = QtGui.QPixmap("icons/BGA_Side.png")
+        transform = QtGui.QTransform().rotate(360 - int(angle / 3))
+        pixmap = pixmap.transformed(transform, QtCore.Qt.SmoothTransformation)
+        self.label.setPixmap(pixmap)
+    def iconRollRotate(self, angle):
+        angle = self.speedSlider.value()
+        pixmap2 = QtGui.QPixmap("icons/BGA_front.png")
+        transform = QtGui.QTransform().rotate(int(angle / 3))
+        pixmap2 = pixmap2.transformed(transform, QtCore.Qt.SmoothTransformation)
+        self.label_2.setPixmap(pixmap2)
+
 
 
     def lowBeamIconChange(self):
@@ -111,6 +141,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         newAngleStyleSheet = styleSheetAngle.replace("{ANGLE}", angleValue)
 
         self.rollAnimation.setStyleSheet(newAngleStyleSheet)
+
+        # def rotate_pixmap(self, angle):
+        #     pixmap = QtGui.QPixmap("icons/BGA_Side.svg")
+        #     transform = QtGui.QTransform().rotate(angle)
+        #     pixmap = pixmap.transformed(transform, QtCore.Qt.SmoothTransformation)
+        #     self.label.setPixmap(pixmap)
 
 
 app = QtWidgets.QApplication(sys.argv)

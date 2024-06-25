@@ -1,0 +1,23 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>1рисунок.svg</file>
+    <file>battery_12V_state_discharge.png</file>
+    <file>battery_12V_state_OK.png</file>
+    <file>BG.svg</file>
+    <file>BGA_Side.jpg</file>
+    <file>charge_power_bat_off.png</file>
+    <file>charge_power_bat_on.png</file>
+    <file>fog_ligfht_off.png</file>
+    <file>fog_light_on.png</file>
+    <file>high_beam_off.png</file>
+    <file>high_beam_on.png</file>
+    <file>low_beam_off.png</file>
+    <file>low_beam_on.png</file>
+    <file>power_bat_state_20_percent.png</file>
+    <file>power_bat_state_40_percent.png</file>
+    <file>power_bat_state_80_percent.png</file>
+    <file>wheel_pump_off.png</file>
+    <file>wheels_pump_on.png</file>
+    <file>рисунок.svg</file>
+  </qresource>
+</RCC>

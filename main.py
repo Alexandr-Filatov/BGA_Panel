@@ -2,7 +2,7 @@ import sys
 from PyQt5 import QtWidgets, QtGui, QtCore,  uic
 from PyQt5.QtCore import *
 import math
-from Panel2 import Ui_MainWindow
+from Panel import Ui_MainWindow
 
 # class Worker(QRunnable):
 #
@@ -22,21 +22,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         super(MainWindow, self).__init__(*args, **kwargs)
         self.setupUi(self)
         #self.threadpool = QThreadPool()
-
-        self.lowBeamsBtn.clicked.connect(self.lowBeamIconChange)
-        self.highBeamsBtn.clicked.connect(self.highBeamIconChange)
-        self.fogLigghtsBtn.clicked.connect(self.fogLightIconChange)
-        self.battery12Btn.clicked.connect(self.battery12IconChange)
-        self.wheelPumpBtn.clicked.connect(self.wheelsPumpIconChange)
-        self.chargePowerBatBtn.clicked.connect(self.chargePowerBatIconChange)
-        self.powerBatStateBtn.clicked.connect(self.powerBatStateIconChange)
-
-        self.speedSlider.valueChanged.connect(self.progress1)
-        self.speedSlider.valueChanged.connect(self.progress2)
-        self.speedSlider.valueChanged.connect(self.progress3)
-
-
-
 
     def progress1(self):
         # worker = Worker()
@@ -60,7 +45,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.iconRollRotate(angle)
         self.iconTangRotate(angle)
 
-
     def iconTangRotate(self, angle):
         angle = self.speedSlider.value()
         pixmap = QtGui.QPixmap("icons/BGA_Side.png")
@@ -68,6 +52,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         transform = QtGui.QTransform().rotate(360 - int(angle / 3))
         pixmap = pixmap.transformed(transform, QtCore.Qt.SmoothTransformation)
         self.label.setPixmap(pixmap)
+
     def iconRollRotate(self, angle):
         angle = self.speedSlider.value()
         pixmap2 = QtGui.QPixmap("icons/BGA_front.png")
@@ -75,8 +60,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         transform = QtGui.QTransform().rotate(int(angle / 3))
         pixmap2 = pixmap2.transformed(transform, QtCore.Qt.SmoothTransformation)
         self.label_2.setPixmap(pixmap2)
-
-
 
     def lowBeamIconChange(self):
         self.lowBeams.setPixmap(QtGui.QPixmap("icons/low_beam_on.png"))
@@ -99,7 +82,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def powerBatStateIconChange(self):
         self.powerBatState.setPixmap(QtGui.QPixmap("icons/power_bat_state_20_percent.png"))
 
-
     def speedValue(self, value):
         styleSheet = """   
             QFrame{
@@ -107,7 +89,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 border-radius:150px;
             }
         """
-
         progress = (100 - value)/100.0
         progressColor = 2.55*value
 
@@ -154,12 +135,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
 
 app = QtWidgets.QApplication(sys.argv)
-
-
-
-
-
-#window = uic.loadUi("Panel.ui")
+window = uic.loadUi("Panel.ui")
 window  = MainWindow()
 window.show()
 app.exec()

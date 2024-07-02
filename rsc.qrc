@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="icon">
+    <file>icons/main_background2.png</file>
+    <file>icons/main_backgroung.png</file>
     <file>icons/BG.svg</file>
     <file>icons/battery_12V_state_discharge.png</file>
     <file>icons/battery_12V_state_OK.png</file>
